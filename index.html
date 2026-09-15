@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Caretaker Home Services| Reliable Home Cleaning & Repair Services</title>
+  <title>Caretaker Home Services | Reliable Home Cleaning & Repair Services</title>
   
   <!-- Font Awesome & Google Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -454,7 +454,7 @@
     <div class="nav-container">
       <a href="#" class="logo">
         <i class="fa-solid fa-house-chimney-crack"></i>
-        <span>Rajarhat Home Hub</span>
+        <span>Caretaker Home Services</span>
       </a>
       <div class="lang-switcher">
         <select id="langSelect" onchange="setLanguage(this.value)">
@@ -1182,7 +1182,7 @@
 
   <!-- Footer -->
   <footer>
-    <p><strong>Rajarhat Home Hub (RHH)</strong> &copy; 2026. All Rights Reserved.</p>
+    <p><strong>Caretaker Home Services (RHH)</strong> &copy; 2026. All Rights Reserved.</p>
     <p>WhatsApp: +91 8240666058 | Serving Rajarhat • New Town • Salt Lake & More </p>
     <p style="margin-top: 8px;"><a href="https://wa.me/c/918240666058" target="_blank"><i class="fa-solid fa-bag-shopping"></i> View Full WhatsApp Catalog</a></p>
   </footer>
@@ -1426,29 +1426,29 @@
       const displayService = (serviceNames[activeLang] && serviceNames[activeLang][service]) || service;
       let msg = '';
       if (activeLang === 'bn') {
-        msg = `*নতুন সার্ভিস অনুসন্ধান - Rajarhat Home Hub*\n\n📌 *ধরন:* ${actionType}\n🛠 *সার্ভিস:* ${displayService}\n`;
+        msg = `*নতুন সার্ভিস অনুসন্ধান - Caretaker Home Services*\n\n📌 *ধরন:* ${actionType}\n🛠 *সার্ভিস:* ${displayService}\n`;
         if (price) msg += `💰 *নির্ধারিত রেট:* ${price}\n`;
         msg += `------------------------\n👤 *গ্রাহকের নাম:* ${name}\n📞 *ফোন নম্বর:* ${phone}\n`;
         if (address) msg += `🏠 *লোকেশন/ঠিকানা:* ${address}\n`;
         if (mapUrl) msg += `📍 *লাইভ GPS ম্যাপ:* ${mapUrl}\n`;
         if (notes) msg += `📝 *কাজের বিবরণ:* ${notes}\n`;
-        msg += `\n_Rajarhat Home Hub ওয়েবসাইট থেকে পাঠানো হয়েছে_`;
+        msg += `\n_Caretaker Home Services ওয়েবসাইট থেকে পাঠানো হয়েছে_`;
       } else if (activeLang === 'hi') {
-        msg = `*नई सर्विस पूछताछ - Rajarhat Home Hub*\n\n📌 *प्रकार:* ${actionType}\n🛠 *सर्विस:* ${displayService}\n`;
+        msg = `*नई सर्विस पूछताछ - Caretaker Home Services*\n\n📌 *प्रकार:* ${actionType}\n🛠 *सर्विस:* ${displayService}\n`;
         if (price) msg += `💰 *कोटेड रेट:* ${price}\n`;
         msg += `------------------------\n👤 *ग्राहक का नाम:* ${name}\n📞 *फोन नंबर:* ${phone}\n`;
         if (address) msg += `🏠 *लोकेशन/पता:* ${address}\n`;
         if (mapUrl) msg += `📍 *लाइव GPS मैप:* ${mapUrl}\n`;
         if (notes) msg += `📝 *काम की जानकारी:* ${notes}\n`;
-        msg += `\n_Rajarhat Home Hub वेबसाइट से भेजा गया_`;
+        msg += `\n_Caretaker Home Services वेबसाइट से भेजा गया_`;
       } else {
-        msg = `*NEW SERVICE INQUIRY - Rajarhat Home Hub*\n\n📌 *Type:* ${actionType}\n🛠 *Service:* ${displayService}\n`;
+        msg = `*NEW SERVICE INQUIRY - Caretaker Home Services*\n\n📌 *Type:* ${actionType}\n🛠 *Service:* ${displayService}\n`;
         if (price) msg += `💰 *Quoted Rate:* ${price}\n`;
         msg += `------------------------\n👤 *Customer Name:* ${name}\n📞 *Phone Number:* ${phone}\n`;
         if (address) msg += `🏠 *Location/Address:* ${address}\n`;
         if (mapUrl) msg += `📍 *Live GPS Map:* ${mapUrl}\n`;
         if (notes) msg += `📝 *Notes/Requirements:* ${notes}\n`;
-        msg += `\n_Sent directly from Rajarhat Home Hub Website_`;
+        msg += `\n_Sent directly from Caretaker Home Services Website_`;
       }
       const waLink = `https://wa.me/918240666058?text=${encodeURIComponent(msg)}`;
       closePopup();
