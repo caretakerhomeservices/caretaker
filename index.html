@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rajarhat Home Hub | Reliable Home Cleaning & Repair Services</title>
+  
+  <!-- Font Awesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0F172A;
+      --primary-light: #1E293B;
+      --accent: #0D9488;
+      --accent-hover: #0F766E;
+      --whatsapp: #25D366;
+      --whatsapp-hover: #20BA56;
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --text: #0F172A;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+      --radius: 14px;
+      --shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Outfit', 'Hind Siliguri', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Navigation */
+    header {
+      background: rgba(15, 23, 42, 0.98);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+    .logo i {
+      color: #2DD4BF;
+      font-size: 1.5rem;
+    }
+    .lang-switcher select {
+      background: var(--primary-light);
+      color: #FFFFFF;
+      border: 1px solid var(--accent);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      font-weight: 600;
+      outline: none;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+      color: #FFFFFF;
+      padding: 55px 20px 75px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+      line-height: 1.25;
+    }
+    .hero h1 span {
+      color: #2DD4BF;
+    }
+    .hero p {
+      font-size: 1.05rem;
+      color: #94A3B8;
+      max-width: 680px;
+      margin: 0 auto 24px;
+    }
+    .hero-badges {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+    .hero-badge {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 7px 16px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      color: #F1F5F9;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: none;
+    }
+    .btn-accent {
+      background: var(--accent);
+      color: #FFFFFF;
+    }
+    .btn-accent:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: #FFFFFF;
+    }
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-hover);
+      transform: translateY(-1px);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: -35px auto 60px;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    /* USP Cards */
+    .usp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+      margin-bottom: 50px;
+    }
+    .usp-card {
+      background: #FFFFFF;
+      padding: 20px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--accent);
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .usp-icon {
+      background: #CCFBF1;
+      color: var(--accent);
+      font-size: 1.35rem;
+      padding: 12px;
+      border-radius: 12px;
+      line-height: 1;
+    }
+    .usp-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .usp-card p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    /* Section Titles */
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    .section-title h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .section-title p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Rate Cards & Grid */
+    .category-block {
+      margin-bottom: 40px;
+    }
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #FFFFFF;
+      padding: 14px 20px;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      margin-bottom: 16px;
+      border-left: 5px solid var(--accent);
+    }
+    .category-header i {
+      font-size: 1.35rem;
+      color: var(--accent);
+    }
+    .category-header h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .rates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .rate-card {
+      background: #FFFFFF;
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid var(--border);
+    }
+    .card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .card-price {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+    .card-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: auto;
+    }
+    .btn-sm {
+      padding: 9px 8px;
+      font-size: 0.85rem;
+      text-align: center;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      transition: background-color 0.2s;
+    }
+    .btn-sm-primary {
+      background: var(--accent);
+      color: #FFFFFF;
+    }
+    .btn-sm-primary:hover {
+      background: var(--accent-hover);
+    }
+    .btn-sm-outline {
+      border-color: #CBD5E1;
+      background: #FFFFFF;
+      color: var(--text);
+    }
+    .btn-sm-outline:hover {
+      background: #F1F5F9;
+    }
+
+    /* Modal Form */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(4px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      z-index: 2000;
+    }
+    .modal-content {
+      background: #FFFFFF;
+      border-radius: 18px;
+      width: 100%;
+      max-width: 480px;
+      padding: 26px;
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: #F1F5F9;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+    }
+    .modal-header h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+    .modal-header p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .form-group {
+      margin-bottom: 14px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: var(--primary);
+    }
+    .form-group label span {
+      color: #E11D48;
+    }
+    .form-control {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #CBD5E1;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+    .form-control:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+    }
+    .location-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px;
+      background: #E0F2FE;
+      color: #0369A1;
+      border: 1px dashed #38BDF8;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+    .location-btn:hover {
+      background: #BAE6FD;
+    }
+    .location-status {
+      font-size: 0.8rem;
+      color: var(--accent-hover);
+      margin-top: 4px;
+      display: block;
+      font-weight: 600;
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: var(--whatsapp);
+      color: #FFFFFF;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+      z-index: 999;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .floating-whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary);
+      color: #94A3B8;
+      padding: 35px 20px;
+      text-align: center;
+    }
+    footer a {
+      color: #2DD4BF;
+      text-decoration: none;
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 1.85rem; }
+      .hero { padding: 40px 16px 60px; }
+      .container { margin-top: -25px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <i class="fa-solid fa-house-chimney-crack"></i>
+        <span>Rajarhat Home Hub</span>
+      </a>
+      <div class="lang-switcher">
+        <select id="langSelect" onchange="setLanguage(this.value)">
+          <option value="en" selected>English</option>
+          <option value="bn">বাংলা</option>
+          <option value="hi">हिन्दी</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 id="txt_hero_title">Rajarhat & New Town's Trusted <span>Home Services</span></h1>
+    <p id="txt_hero_sub">Zero app downloads required. Book verified professionals directly via WhatsApp with transparent upfront pricing.</p>
+    
+    <div class="hero-badges">
+      <div class="hero-badge"><i class="fa-solid fa-location-dot"></i> Rajarhat • New Town • Salt Lake & More</div>
+      <div class="hero-badge"><i class="fa-solid fa-shield-check"></i> <span id="txt_badge_support">7-Day Service Guarantee</span></div>
+      <div class="hero-badge"><i class="fa-solid fa-clock"></i> <span id="txt_badge_time">Instant Response in 30 Mins</span></div>
+    </div>
+
+    <div class="hero-buttons">
+      <button class="btn btn-accent" onclick="openPopup('General Enquiry', '', 'Enquiry')">
+        <i class="fa-solid fa-clipboard-question"></i> <span id="txt_btn_query">Quick Enquiry</span>
+      </button>
+      <a href="https://wa.me/c/918240666058" target="_blank" class="btn btn-whatsapp">
+        <i class="fa-brands fa-whatsapp"></i> <span id="txt_btn_cat">View WhatsApp Catalog</span>
+      </a>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- USP Features -->
+    <div class="usp-grid">
+      <div class="usp-card">
+        <div class="usp-icon"><i class="fa-brands fa-whatsapp"></i></div>
+        <div>
+          <h3 id="txt_usp1_t">Easy WhatsApp Booking</h3>
+          <p id="txt_usp1_d">No app clutter. Fast booking and instant chat confirmation directly on WhatsApp.</p>
+        </div>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon"><i class="fa-solid fa-users"></i></div>
+        <div>
+          <h3 id="txt_usp2_t">Local Expert Team</h3>
+          <p id="txt_usp2_d">Verified professional crew exclusively serving Rajarhat, New Town & Salt Lake.</p>
+        </div>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon"><i class="fa-solid fa-receipt"></i></div>
+        <div>
+          <h3 id="txt_usp3_t">Transparent Pricing</h3>
+          <p id="txt_usp3_d">Upfront quotations with clear pricing. No hidden fees or unexpected charges.</p>
+        </div>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon"><i class="fa-solid fa-camera-retro"></i></div>
+        <div>
+          <h3 id="txt_usp4_t">Photo-Based Quotes</h3>
+          <p id="txt_usp4_d">Send job photos for exact quotations and quality verification before and after work.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rate Card Header -->
+    <div class="section-title">
+      <h2 id="txt_rate_t">Our Services & Rate Card</h2>
+      <p id="txt_rate_s">Click on any service to instantly book or submit an enquiry</p>
+    </div>
+
+    <!-- 1. Bathroom Deep Cleaning -->
+    <div class="category-block">
+      <div class="category-header">
+        <i class="fa-solid fa-bath"></i>
+        <h3 data-en="🚿 Bathroom Deep Cleaning" data-bn="🚿 বাথরুম ডিপ ক্লিনিং" data-hi="🚿 बाथरूम डीप क्लीनिंग">🚿 Bathroom Deep Cleaning</h3>
+      </div>
+      <div class="rates-grid">
+        <div class="rate-card">
+          <div><div class="card-title" data-en="1 Bathroom Deep Clean" data-bn="১টি বাথরুম ডিপ ক্লিন" data-hi="1 बाथरूम डीप क्लीन">1 Bathroom Deep Clean</div><div class="card-price">₹599</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('1 Bathroom Deep Clean', '₹599', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('1 Bathroom Deep Clean', '₹599', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="2 Bathroom Deep Clean" data-bn="২টি বাথরুম ডিপ ক্লিন" data-hi="2 बाथरूम डीप क्लीन">2 Bathroom Deep Clean</div><div class="card-price">₹999</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('2 Bathroom Deep Clean', '₹999', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('2 Bathroom Deep Clean', '₹999', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="3 Bathroom Deep Clean" data-bn="৩টি বাথরুম ডিপ ক্লিন" data-hi="3 बाथरूम डीप क्लीन">3 Bathroom Deep Clean</div><div class="card-price">₹1,399</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('3 Bathroom Deep Clean', '₹1,399', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('3 Bathroom Deep Clean', '₹1,399', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Extra Bathroom" data-bn="অতিরিক্ত বাথরুম" data-hi="अतिरिक्त बाथरूम">Extra Bathroom</div><div class="card-price">₹449</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Extra Bathroom', '₹449', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Extra Bathroom', '₹449', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Extra Exhaust Fan" data-bn="এক্সহস্ট ফ্যান পরিষ্কার" data-hi="अतिरिक्त एग्जॉस्ट पंखा">Extra Exhaust Fan</div><div class="card-price">₹99</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Extra Exhaust Fan', '₹99', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Extra Exhaust Fan', '₹99', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Extra Mirror Cleaning" data-bn="মিরর / আয়না" data-hi="अतिरिक्त दर्पण सफाई">Extra Mirror Cleaning</div><div class="card-price">₹49</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Extra Mirror Cleaning', '₹49', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Extra Mirror Cleaning', '₹49', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Extra Wash Basin" data-bn="অতিরিক্ত ওয়াশ বেসিন" data-hi="अतिरिक्त वॉश बेसिन">Extra Wash Basin</div><div class="card-price">₹69</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Extra Wash Basin', '₹69', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Extra Wash Basin', '₹69', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Bathroom Door Cleaning" data-bn="বাথরুম ডোর ক্লিন" data-hi="बाथरूम दरवाजा सफाई">Bathroom Door Cleaning</div><div class="card-price">₹79</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Bathroom Door Cleaning', '₹79', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Bathroom Door Cleaning', '₹79', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Kitchen Deep Cleaning -->
+    <div class="category-block">
+      <div class="category-header">
+        <i class="fa-solid fa-kitchen-set"></i>
+        <h3 data-en="🍳 Kitchen Deep Cleaning" data-bn="🍳 কিচেন ডিপ ক্লিনিং" data-hi="🍳 किचन डीप क्लीनिंग">🍳 Kitchen Deep Cleaning</h3>
+      </div>
+      <div class="rates-grid">
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Complete Kitchen Cleaning" data-bn="কমপ্লিট কিচেন ডিপ ক্লিন" data-hi="पूरा किचन डीप क्लीन">Complete Kitchen Cleaning</div><div class="card-price">₹899</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Complete Kitchen Cleaning', '₹899', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Complete Kitchen Cleaning', '₹899', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Cabinet + Tiles + Sink" data-bn="ক্যাবিনেট + টাইলস + সিঙ্ক" data-hi="कैबिनेट + टाइल्स + सिंक">Cabinet + Tiles + Sink</div><div class="card-price">₹599</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Cabinet + Tiles + Sink', '₹599', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Cabinet + Tiles + Sink', '₹599', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Chimney + Gas Stove" data-bn="চিমনি + গ্যাস ওভেন" data-hi="चिमनी + गैस चूल्हा">Chimney + Gas Stove</div><div class="card-price">₹1,299</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Chimney + Gas Stove', '₹1,299', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Chimney + Gas Stove', '₹1,299', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Fridge Deep Cleaning" data-bn="ফ্রিজ ডিপ ক্লিন" data-hi="फ्रिज डीप क्लीनिंग">Fridge Deep Cleaning</div><div class="card-price">₹349</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Fridge Deep Cleaning', '₹349', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Fridge Deep Cleaning', '₹349', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Microwave Oven Cleaning" data-bn="মাইক্রোওয়েভ ক্লিন" data-hi="माइक्रोवेव सफाई">Microwave Oven Cleaning</div><div class="card-price">₹149</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Microwave Oven Cleaning', '₹149', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Microwave Oven Cleaning', '₹149', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Gas Stove Cleaning" data-bn="গ্যাস স্টোভ / ওভেন" data-hi="गैस चूल्हा सफाई">Gas Stove Cleaning</div><div class="card-price">₹99</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Gas Stove Cleaning', '₹99', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Gas Stove Cleaning', '₹99', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Kitchen Fan + Window" data-bn="কিচেন ফ্যান + উইন্ডো" data-hi="किचन पंखा + खिड़की">Kitchen Fan + Window</div><div class="card-price">₹449</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Kitchen Fan + Window', '₹449', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Kitchen Fan + Window', '₹449', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Full Home Deep Cleaning -->
+    <div class="category-block">
+      <div class="category-header">
+        <i class="fa-solid fa-building"></i>
+        <h3 data-en="🏡 Full Home Deep Cleaning" data-bn="🏡 ফুল হোম ডিপ ক্লিনিং" data-hi="🏡 पूरे घर की डीप क्लीनिंग">🏡 Full Home Deep Cleaning</h3>
+      </div>
+      <div class="rates-grid">
+        <div class="rate-card">
+          <div><div class="card-title" data-en="1 BHK Full Home" data-bn="১ বিএইচকে ফুল হোম" data-hi="1 BHK पूरा घर">1 BHK Full Home</div><div class="card-price">₹1,799</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('1 BHK Full Home', '₹1,799', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('1 BHK Full Home', '₹1,799', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="2 BHK Full Home" data-bn="২ বিএইচকে ফুল হোম" data-hi="2 BHK पूरा घर">2 BHK Full Home</div><div class="card-price">₹2,499</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('2 BHK Full Home', '₹2,499', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('2 BHK Full Home', '₹2,499', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="3 BHK Full Home" data-bn="৩ বিএইচকে ফুল হোম" data-hi="3 BHK पूरा घर">3 BHK Full Home</div><div class="card-price">₹2,999</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('3 BHK Full Home', '₹2,999', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('3 BHK Full Home', '₹2,999', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="4 BHK Full Home" data-bn="৪ বিএইচকে ফুল হোম" data-hi="4 BHK पूरा घर">4 BHK Full Home</div><div class="card-price">₹3,499</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('4 BHK Full Home', '₹3,499', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('4 BHK Full Home', '₹3,499', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Furnished 1 BHK" data-bn="ফার্নিশড ১ বিএইচকে" data-hi="सुसज्जित 1 BHK">Furnished 1 BHK</div><div class="card-price">₹2,099</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Furnished 1 BHK', '₹2,099', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Furnished 1 BHK', '₹2,099', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Furnished 2 BHK" data-bn="ফার্নিশড ২ বিএইচকে" data-hi="सुसज्जित 2 BHK">Furnished 2 BHK</div><div class="card-price">₹2,799</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Furnished 2 BHK', '₹2,799', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Furnished 2 BHK', '₹2,799', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Furnished 3 BHK" data-bn="ফার্নিশড ৩ বিএইচকে" data-hi="सुसज्जित 3 BHK">Furnished 3 BHK</div><div class="card-price">₹3,299</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Furnished 3 BHK', '₹3,299', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Furnished 3 BHK', '₹3,299', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Move-in / Move-out Cleaning -->
+    <div class="category-block">
+      <div class="category-header">
+        <i class="fa-solid fa-truck-ramp-box"></i>
+        <h3 data-en="🚚 Move-in / Move-out Cleaning" data-bn="🚚 মুভ-ইন / মুভ-আউট ক্লিনিং" data-hi="🚚 शिफ्टिंग क्लीनिंग">🚚 Move-in / Move-out Cleaning</h3>
+      </div>
+      <div class="rates-grid">
+        <div class="rate-card">
+          <div><div class="card-title" data-en="1 BHK Move-in/out" data-bn="১ বিএইচকে মুভ-ইন/আউট" data-hi="1 BHK शिफ्टिंग">1 BHK Move-in/out</div><div class="card-price">₹2,299</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('1 BHK Move-in/out', '₹2,299', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('1 BHK Move-in/out', '₹2,299', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="2 BHK Move-in/out" data-bn="২ বিএইচকে মুভ-ইন/আউট" data-hi="2 BHK शिफ्टिंग">2 BHK Move-in/out</div><div class="card-price">₹2,999</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('2 BHK Move-in/out', '₹2,999', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('2 BHK Move-in/out', '₹2,999', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="3 BHK Move-in/out" data-bn="৩ বিএইচকে মুভ-ইন/আউট" data-hi="3 BHK शिफ्टिंग">3 BHK Move-in/out</div><div class="card-price">₹3,499</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('3 BHK Move-in/out', '₹3,499', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('3 BHK Move-in/out', '₹3,499', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="4 BHK Move-in/out" data-bn="৪ বিএইচকে মুভ-ইন/আউট" data-hi="4 BHK शिफ्टिंग">4 BHK Move-in/out</div><div class="card-price">₹4,199</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('4 BHK Move-in/out', '₹4,199', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('4 BHK Move-in/out', '₹4,199', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Empty 2 BHK Flat" data-bn="খালি ২ বিএইচকে ফ্ল্যাট" data-hi="खाली 2 BHK फ्लैट">Empty 2 BHK Flat</div><div class="card-price">₹2,499</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Empty 2 BHK Flat', '₹2,499', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Empty 2 BHK Flat', '₹2,499', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Empty 3 BHK Flat" data-bn="খালি ৩ বিএইচকে ফ্ল্যাট" data-hi="खाली 3 BHK फ्लैट">Empty 3 BHK Flat</div><div class="card-price">₹2,999</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Empty 3 BHK Flat', '₹2,999', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Empty 3 BHK Flat', '₹2,999', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Sofa & Carpet -->
+    <div class="category-block">
+      <div class="category-header">
+        <i class="fa-solid fa-couch"></i>
+        <h3 data-en="🛋️ Sofa & Carpet Cleaning" data-bn="🛋️ সোফা ও কার্পেট ক্লিনিং" data-hi="🛋️ सोफा और कालीन सफाई">🛋️ Sofa & Carpet Cleaning</h3>
+      </div>
+      <div class="rates-grid">
+        <div class="rate-card">
+          <div><div class="card-title" data-en="5-Seat Sofa Cleaning" data-bn="৫-সিটার সোফা" data-hi="5-सीटर सोफा">5-Seat Sofa Cleaning</div><div class="card-price">₹499</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('5-Seat Sofa Cleaning', '₹499', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('5-Seat Sofa Cleaning', '₹499', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="7-Seat Sofa Cleaning" data-bn="৭-সিটার সোফা" data-hi="7-सीटर सोफा">7-Seat Sofa Cleaning</div><div class="card-price">₹649</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('7-Seat Sofa Cleaning', '₹649', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('7-Seat Sofa Cleaning', '₹649', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="9-Seat Sofa Cleaning" data-bn="৯-সিটার সোফা" data-hi="9-सीटर सोफा">9-Seat Sofa Cleaning</div><div class="card-price">₹799</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('9-Seat Sofa Cleaning', '₹799', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('9-Seat Sofa Cleaning', '₹799', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="L-Shape Sofa Cleaning" data-bn="এল-শেপ সোফা" data-hi="एल-शेप सोफा">L-Shape Sofa Cleaning</div><div class="card-price">₹899</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('L-Shape Sofa Cleaning', '₹899', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('L-Shape Sofa Cleaning', '₹899', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Recliner Single Seat" data-bn="রিক্লাইনার" data-hi="रेक्लाइनर">Recliner Single Seat</div><div class="card-price">₹199</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Recliner Single Seat', '₹199', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Recliner Single Seat', '₹199', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Sofa-cum-Bed" data-bn="সোফা-কাম-বেড" data-hi="सोफा-कम-बेड">Sofa-cum-Bed</div><div class="card-price">₹399</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Sofa-cum-Bed', '₹399', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Sofa-cum-Bed', '₹399', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Carpet (Small)" data-bn="কার্পেট (ছোট)" data-hi="कालीन (छोटा)">Carpet (Small)</div><div class="card-price">₹299</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Carpet (Small)', '₹299', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Carpet (Small)', '₹299', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Carpet (Medium)" data-bn="কার্পেট (মাঝারি)" data-hi="कालीन (मध्यम)">Carpet (Medium)</div><div class="card-price">₹399</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Carpet (Medium)', '₹399', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Carpet (Medium)', '₹399', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Carpet (Large)" data-bn="কার্পেট (বড়)" data-hi="कालीन (बड़ा)">Carpet (Large)</div><div class="card-price">₹599</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Carpet (Large)', '₹599', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Carpet (Large)', '₹599', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Mattress (Single)" data-bn="গদি (সিঙ্গেল)" data-hi="गद्दा (सिंगल)">Mattress (Single)</div><div class="card-price">₹299</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Mattress (Single)', '₹299', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Mattress (Single)', '₹299', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Mattress (Double)" data-bn="গদি (ডাবল)" data-hi="गद्दा (डबल)">Mattress (Double)</div><div class="card-price">₹399</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Mattress (Double)', '₹399', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Mattress (Double)', '₹399', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Windows / Balcony / Extra Cleaning -->
+    <div class="category-block">
+      <div class="category-header">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <h3 data-en="🪟 Windows / Balcony / Extra Cleaning" data-bn="🪟 জানালা ও অতিরিক্ত ক্লিনিং" data-hi="🪟 खिड़कियाँ और अतिरिक्त सफाई">🪟 Windows / Balcony / Extra Cleaning</h3>
+      </div>
+      <div class="rates-grid">
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Window Cleaning" data-bn="জানালা পরিষ্কার" data-hi="खिड़की सफाई">Window Cleaning</div><div class="card-price">₹79/panel</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Window Cleaning', '₹79/panel', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Window Cleaning', '₹79/panel', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Balcony Deep Clean" data-bn="ব্যালকনি ক্লিনিং" data-hi="बालकनी सफाई">Balcony Deep Clean</div><div class="card-price">₹299+</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Balcony Deep Clean', '₹299+', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Balcony Deep Clean', '₹299+', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Ceiling Fan Cleaning" data-bn="সিলিং ফ্যান" data-hi="सीलिंग पंखा सफाई">Ceiling Fan Cleaning</div><div class="card-price">₹99</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Ceiling Fan Cleaning', '₹99', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Ceiling Fan Cleaning', '₹99', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Wall Spot Cleaning" data-bn="দেওয়ালের দাগ তোলা" data-hi="दीवार के दाग हटाना">Wall Spot Cleaning</div><div class="card-price">₹199+</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Wall Spot Cleaning', '₹199+', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Wall Spot Cleaning', '₹199+', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Cobweb Removal" data-bn="মাকড়সার জাল পরিষ্কার" data-hi="मकड़ी का जाला हटाना">Cobweb Removal</div><div class="card-price">₹149</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Cobweb Removal', '₹149', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Cobweb Removal', '₹149', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Dining Table + Chairs" data-bn="ডাইনিং টেবিল ও চেয়ার" data-hi="डाइनिंग टेबल और कुर्सियाँ">Dining Table + Chairs</div><div class="card-price">₹399</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Dining Table + Chairs', '₹399', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Dining Table + Chairs', '₹399', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Electrician Services -->
+    <div class="category-block">
+      <div class="category-header">
+        <i class="fa-solid fa-bolt"></i>
+        <h3 data-en="⚡ Electrician Services" data-bn="⚡ ইলেকট্রিশিয়ান সার্ভিস" data-hi="⚡ इलेक्ट्रीशियन सेवाएं">⚡ Electrician Services</h3>
+      </div>
+      <div class="rates-grid">
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Visit / Inspection" data-bn="ভিজিট / পরিদর্শন" data-hi="विजिट / निरीक्षण">Visit / Inspection</div><div class="card-price">₹99</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Electrician Visit', '₹99', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Electrician Visit', '₹99', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Switch / Socket Repair" data-bn="সুইচ / সকেট" data-hi="स्विच / सॉकेट मरम्मत">Switch / Socket Repair</div><div class="card-price">149</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Switch / Socket Repair', '₹149', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Switch / Socket Repair', '₹149', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Plug Installation" data-bn="প্লাগ পয়েন্ট" data-hi="प्लग लगाना">Plug Installation</div><div class="card-price">₹149</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Plug Installation', '₹79', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Plug Installation', '₹79', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Switchboard Work" data-bn="সুইচবোর্ড" data-hi="स्विचबोर्ड कार्य">Switchboard Work</div><div class="card-price">₹149</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Switchboard Work', '₹149', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Switchboard Work', '₹149', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Fan Installation" data-bn="ফ্যান লাগানো" data-hi="पंखा लगाना">Fan Installation</div><div class="card-price">₹199</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Fan Installation', '₹199', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Fan Installation', '₹199', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Fan Repair" data-bn="ফ্যান মেরামত" data-hi="पंखा मरम्मत">Fan Repair</div><div class="card-price">₹149</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Fan Repair', '₹149', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Fan Repair', '₹149', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Light Installation" data-bn="লাইট ফিটিং" data-hi="लाइट लगाना">Light Installation</div><div class="card-price">₹149</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Light Installation', '₹149', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Light Installation', '₹149', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Chandelier Fitting" data-bn="ঝাড়বাতি" data-hi="झूमर लगाना">Chandelier Fitting</div><div class="card-price">₹399+</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Chandelier Fitting', '₹399+', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Chandelier Fitting', '₹399+', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="MCB Work" data-bn="এমসিবি (MCB) কাজ" data-hi="MCB काम">MCB Work</div><div class="card-price">₹199+</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('MCB Work', '₹199+', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('MCB Work', '₹199+', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. Plumbing Services -->
+    <div class="category-block">
+      <div class="category-header">
+        <i class="fa-solid fa-faucet-drip"></i>
+        <h3 data-en="🔧 Plumbing Services" data-bn="🔧 প্লাম্বার সার্ভিস" data-hi="🔧 प्लम्बर सेवाएं">🔧 Plumbing Services</h3>
+      </div>
+      <div class="rates-grid">
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Plumber Visit" data-bn="পরিদর্শন / ভিজিট" data-hi="विजिट शुल्क">Plumber Visit</div><div class="card-price">₹99</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Plumber Visit', '₹99', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Plumber Visit', '₹99', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Tap Repair" data-bn="কল মেরামত" data-hi="नल मरम्मत">Tap Repair</div><div class="card-price">₹99</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Tap Repair', '₹99', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Tap Repair', '₹99', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Tap Installation" data-bn="নতুন কল লাগানো" data-hi="नल लगाना">Tap Installation</div><div class="card-price">₹99</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Tap Installation', '₹99', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Tap Installation', '₹99', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Health Faucet / Jet Spray" data-bn="জেট স্প্রে" data-hi="जेट स्प्रे">Health Faucet / Jet Spray</div><div class="card-price">₹149</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Jet Spray Fitting', '₹149', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Jet Spray Fitting', '₹149', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Flush Tank Repair" data-bn="টয়লেট ফ্লাশ মেরামত" data-hi="फ्लश मरम्मत">Flush Tank Repair</div><div class="card-price">₹149</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Flush Tank Repair', '₹149', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Flush Tank Repair', '₹149', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Wash Basin Installation" data-bn="বেসিন ফিটিং" data-hi="बेसिन लगाना">Wash Basin Installation</div><div class="card-price">₹299</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Wash Basin Installation', '₹299', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Wash Basin Installation', '₹299', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Sink Installation" data-bn="সিঙ্ক ফিটিং" data-hi="सिंक लगाना">Sink Installation</div><div class="card-price">₹299</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Sink Installation', '₹299', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Sink Installation', '₹299', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Shower Installation" data-bn="শাওয়ার ফিটিং" data-hi="शावर लगाना">Shower Installation</div><div class="card-price">₹199</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Shower Installation', '₹199', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Shower Installation', '₹199', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Pipe Leakage Repair" data-bn="পাইপ লিকেজ মেরামত" data-hi="पाइप लीकेज">Pipe Leakage Repair</div><div class="card-price">₹199+</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Pipe Leakage Repair', '₹199+', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Pipe Leakage Repair', '₹199+', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Drain Blockage Removal" data-bn="ড্রেন ব্লকেজ পরিষ্কার" data-hi="नाली ब्लॉकेज">Drain Blockage Removal</div><div class="card-price">₹299+</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Drain Blockage Removal', '₹299+', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Drain Blockage Removal', '₹299+', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Water Motor Installation" data-bn="পানির মোটর লাগানো" data-hi="पानी की मोटर लगाना">Water Motor Installation</div><div class="card-price">₹399</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Water Motor Installation', '₹399', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Water Motor Installation', '₹399', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. Mini Shifting & Logistics -->
+    <div class="category-block">
+      <div class="category-header">
+        <i class="fa-solid fa-truck-fast"></i>
+        <h3 data-en="🚛 Mini Shifting & Logistics" data-bn="🚛 মিনি শিফটিং সার্ভিস" data-hi="🚛 मिनी शिफ्टिंग सेवाएं">🚛 Mini Shifting & Logistics</h3>
+      </div>
+      <div class="rates-grid">
+        <div class="rate-card">
+          <div><div class="card-title" data-en="1–2 km Local Shifting" data-bn="১–২ কিমি লোকাল শিফটিং" data-hi="1–2 किमी लोकल शिफ्टिंग">1–2 km Local Shifting</div><div class="card-price">₹999</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('1–2 km Local Shifting', '₹999', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('1–2 km Local Shifting', '₹999', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="2–5 km Shifting" data-bn="২–৫ কিমি শিফটিং" data-hi="2–5 किमी शिफ्टिंग">2–5 km Shifting</div><div class="card-price">₹1,299</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('2–5 km Shifting', '₹1,299', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('2–5 km Shifting', '₹1,299', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="5–10 km Shifting" data-bn="৫–১০ কিমি শিফটিং" data-hi="5–10 किमी शिफ्टिंग">5–10 km Shifting</div><div class="card-price">₹1,699</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('5–10 km Shifting', '₹1,699', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('5–10 km Shifting', '₹1,699', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="10–15 km Shifting" data-bn="১০–১৫ কিমি শিফটিং" data-hi="10–15 किमी शिफ्टिंग">10–15 km Shifting</div><div class="card-price">₹2,199</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('10–15 km Shifting', '₹2,199', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('10–15 km Shifting', '₹2,199', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="1 BHK Shifting" data-bn="১ বিএইচকে শিফটিং" data-hi="1 BHK शिफ्टिंग">1 BHK Shifting</div><div class="card-price">₹1,999+</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('1 BHK Shifting', '₹1,999+', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('1 BHK Shifting', '₹1,999+', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="2 BHK Shifting" data-bn="২ বিএইচকে শিফটিং" data-hi="2 BHK शिफ्टिंग">2 BHK Shifting</div><div class="card-price">₹2,999+</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('2 BHK Shifting', '₹2,999+', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('2 BHK Shifting', '₹2,999+', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="3 BHK Shifting" data-bn="৩ বিএইচকে শিফটিং" data-hi="3 BHK शिफ्टिंग">3 BHK Shifting</div><div class="card-price">₹3,999+</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('3 BHK Shifting', '₹3,999+', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('3 BHK Shifting', '₹3,999+', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+        <div class="rate-card">
+          <div><div class="card-title" data-en="Extra Labour Assistance" data-bn="অতিরিক্ত লেবার" data-hi="अतिरिक्त लेबर">Extra Labour Assistance</div><div class="card-price">₹500/head</div></div>
+          <div class="card-actions">
+            <button class="btn-sm btn-sm-primary btn-book" onclick="openPopup('Extra Labour Assistance', '₹500/head', 'Booking')"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            <button class="btn-sm btn-sm-outline btn-enq" onclick="openPopup('Extra Labour Assistance', '₹500/head', 'Enquiry')"><i class="fa-solid fa-circle-question"></i> Enquiry</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mandatory Lead Modal with Live GPS -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closePopup()"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-header">
+        <h3 id="modalServiceTitle">Booking & Enquiry</h3>
+        <p id="txt_modal_note">Please provide valid contact information. We will call or message you promptly.</p>
+      </div>
+
+      <form id="leadForm" onsubmit="sendWhatsApp(event)">
+        <input type="hidden" id="formService" />
+        <input type="hidden" id="formPrice" />
+        <input type="hidden" id="formActionType" value="Booking" />
+
+        <div class="form-group">
+          <label><span id="txt_lbl_name">Your Full Name</span> <span>*</span></label>
+          <input type="text" id="custName" class="form-control" placeholder="e.g., Rahul Sarkar" required />
+        </div>
+
+        <div class="form-group">
+          <label><span id="txt_lbl_phone">Phone Number (10 Digits)</span> <span>*</span></label>
+          <input type="tel" id="custPhone" class="form-control" placeholder="e.g., 9876543210" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9" required />
+        </div>
+
+        <div class="form-group">
+          <label id="txt_lbl_loc">Location / Address</label>
+          <input type="text" id="custAddress" class="form-control" placeholder="e.g., Action Area 1, New Town" />
+          
+          <button type="button" class="location-btn" onclick="fetchLiveLocation()">
+            <i class="fa-solid fa-map-location-dot"></i> <span id="txt_btn_gps">Attach Live GPS Location</span>
+          </button>
+          <span id="locationStatus" class="location-status"></span>
+          <input type="hidden" id="custMapUrl" />
+        </div>
+
+        <div class="form-group">
+          <label id="txt_lbl_notes">Job Notes / Requirements (Optional)</label>
+          <textarea id="custNotes" class="form-control" rows="2" placeholder="Write any specific requirements or preferred timing..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-whatsapp" style="width: 100%; justify-content: center; padding: 13px;">
+          <i class="fa-brands fa-whatsapp"></i> <span id="txt_btn_submit">Submit via WhatsApp</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating Direct WhatsApp Button -->
+  <a href="https://wa.me/918240666058?text=Hello%20Rajarhat%20Home%20Hub,%20I%20want%20to%20inquire%20about%20your%20services." target="_blank" class="floating-whatsapp" title="Direct WhatsApp Support">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>Rajarhat Home Hub (RHH)</strong> &copy; 2026. All Rights Reserved.</p>
+    <p>WhatsApp: +91 8240666058 | Serving Rajarhat • New Town • Salt Lake & More </p>
+    <p style="margin-top: 8px;"><a href="https://wa.me/c/918240666058" target="_blank"><i class="fa-solid fa-bag-shopping"></i> View Full WhatsApp Catalog</a></p>
+  </footer>
+
+  <!-- Translation & Core Logic -->
+  <script>
+    const trans = {
+      en: {
+        hero_title: "Rajarhat & New Town's Trusted <span>Home Services</span>",
+        hero_sub: "Zero app downloads required. Book verified professionals directly via WhatsApp with transparent upfront pricing.",
+        badge_support: "7-Day Service Guarantee",
+        badge_time: "Instant Response in 30 Mins",
+        btn_query: "Quick Enquiry",
+        btn_cat: "View WhatsApp Catalog",
+        usp1_t: "Easy WhatsApp Booking",
+        usp1_d: "No app clutter. Fast booking and instant chat confirmation directly on WhatsApp.",
+        usp2_t: "Local Expert Team",
+        usp2_d: "Verified professional crew exclusively serving Rajarhat, New Town & Salt Lake.",
+        usp3_t: "Transparent Pricing",
+        usp3_d: "Upfront quotations with clear pricing. No hidden fees or unexpected charges.",
+        usp4_t: "Photo-Based Quotes",
+        usp4_d: "Send job photos for exact quotations and quality verification before and after work.",
+        rate_t: "Our Services & Rate Card",
+        rate_s: "Click on any service to instantly book or submit an enquiry",
+        modal_note: "Please provide valid contact information. We will call or message you promptly.",
+        lbl_name: "Your Full Name",
+        lbl_phone: "Phone Number (10 Digits)",
+        lbl_loc: "Location / Address",
+        lbl_notes: "Job Notes / Requirements (Optional)",
+        btn_gps: "Attach Live GPS Location",
+        btn_submit: "Submit via WhatsApp",
+        ph_name: "e.g., Rahul Sarkar",
+        ph_phone: "e.g., 9876543210",
+        ph_loc: "e.g., Action Area 1, New Town",
+        ph_notes: "Write any specific requirements or preferred timing...",
+        book_txt: "Book Now",
+        enq_txt: "Enquiry",
+        type_book: "Booking",
+        type_query: "Enquiry",
+        loc_finding: "Locating coordinates...",
+        loc_done: "GPS Coordinates Attached Successfully!",
+        loc_err: "Unable to retrieve GPS. Please type your address manually.",
+        alert_validation: "Please enter your name and a valid 10-digit mobile number."
+      },
+      bn: {
+        hero_title: "রাজারহাট ও নিউ টাউনের বিশ্বস্ত <span>হোম সার্ভিস</span>",
+        hero_sub: "কোনো অ্যাপ ডাউনলোডের ঝামেলা নেই। এক ক্লিকেই ভেরিফাইড প্রফেশনাল টিম বুক করুন সরাসরি হোয়াটসঅ্যাপে।",
+        badge_support: "৭ দিনের সার্ভিস গ্যারান্টি",
+        badge_time: "৩০ মিনিটে ইনস্ট্যান্ট রেসপন্স",
+        btn_query: "দ্রুত অনুসন্ধান করুন",
+        btn_cat: "WhatsApp ক্যাটালগ দেখুন",
+        usp1_t: "সহজ WhatsApp বুকিং",
+        usp1_d: "কোনো অ্যাপ ইনস্টল করার দরকার নেই, সরাসরি মেসেজে কনফার্মেশন।",
+        usp2_t: "লোকাল এক্সপার্ট টিম",
+        usp2_d: "রাজারহাট, নিউ টাউন ও সল্টলেক ফোকাসড বিশ্বস্ত কর্মী।",
+        usp3_t: "স্বচ্ছ ও সঠিক দাম",
+        usp3_d: "কোনো লুকানো চার্জ নেই, কাজের আগেই সম্পূর্ণ খরচের হিসাব।",
+        usp4_t: "ফটো ভেরিফিকেশন ও কোট",
+        usp4_d: "কাজের আগের ও পরের ফটো তুলনা করে কাজের কোয়ালিটি যাচাই।",
+        rate_t: "আমাদের সার্ভিস ও রেট কার্ড",
+        rate_s: "যেকোনো সার্ভিসে ক্লিক করে এখনই রেট জানুন ও বুকিং/কোয়েরি পাঠান",
+        modal_note: "আপনার সঠিক তথ্য দিন। আমরা দ্রুত আপনাকে কল বা মেসেজ করব।",
+        lbl_name: "আপনার নাম",
+        lbl_phone: "ফোন নম্বর (১০ সংখ্যা)",
+        lbl_loc: "লোকেশন / ঠিকানা",
+        lbl_notes: "কাজের বিশদ বিবরণ / নোট (ঐচ্ছিক)",
+        btn_gps: "লাইভ GPS লোকেশন শেয়ার করুন",
+        btn_submit: "WhatsApp-এ বুকিং / কোয়েরি পাঠান",
+        ph_name: "যেমন: রাহুল সরকার",
+        ph_phone: "যেমন: 9876543210",
+        ph_loc: "যেমন: Action Area 1, New Town",
+        ph_notes: "আপনার প্রয়োজনীয় কাজের কিছু বিবরণ লিখুন...",
+        book_txt: "বুক করুন",
+        enq_txt: "অনুসন্ধান",
+        type_book: "বুকিং",
+        type_query: "অনুসন্ধান",
+        loc_finding: "লোকেশন খোঁজা হচ্ছে...",
+        loc_done: "সঠিক GPS লোকেশন যুক্ত হয়েছে!",
+        loc_err: "লোকেশন নেওয়া সম্ভব হয়নি, ঠিকানা লিখে দিন।",
+        alert_validation: "দয়া করে আপনার নাম এবং সঠিক ১০ সংখ্যার মোবাইল নম্বর দিন।"
+      },
+      hi: {
+        hero_title: "राजारहाट और न्यू टाउन की भरोसेमंद <span>होम सर्विसेज</span>",
+        hero_sub: "बिना किसी ऐप के सीधे व्हाट्सएप पर पारदर्शी दरों के साथ कुशल प्रोफेशनल बुक करें।",
+        badge_support: "7 दिन का सर्विस सपोर्ट",
+        badge_time: "30 मिनट में तुरंत जवाब",
+        btn_query: "त्वरित पूछताछ",
+        btn_cat: "WhatsApp कैटलॉग देखें",
+        usp1_t: "आसान WhatsApp बुकिंग",
+        usp1_d: "सीधे व्हाट्सएप पर आसानी से बुकिंग और तुरंत बातचीत की सुविधा।",
+        usp2_t: "लोकल एक्सपर्ट टीम",
+        usp2_d: "राजारहाट, न्यू टाउन और साल्ट लेक के लिए समर्पित प्रशिक्षित टीम।",
+        usp3_t: "स्पष्ट और पारदर्शी दरें",
+        usp3_d: "कोई छुपा हुआ शुल्क नहीं, काम शुरू होने से पहले पक्की दरें।",
+        usp4_t: "फोटो आधारित कोटेशन",
+        usp4_d: "काम से पहले और बाद की तस्वीरों से पूरी संतुष्टि और सही रेट।",
+        rate_t: "हमारी सेवाएं और फाइनल रेट कार्ड",
+        rate_s: "किसी भी सेवा पर क्लिक करके तुरंत बुकिंग या पूछताछ करें",
+        modal_note: "कृपया अपनी सही जानकारी दें। हम तुरंत आपसे संपर्क करेंगे।",
+        lbl_name: "आपका नाम",
+        lbl_phone: "फ़ोन नंबर (10 अंक)",
+        lbl_loc: "लोकेशन / पता",
+        lbl_notes: "आवश्यक विवरण / नोट्स (वैकल्पिक)",
+        btn_gps: "वर्तमान लाइव GPS लोकेशन जोड़ें",
+        btn_submit: "WhatsApp पर भेजें",
+        ph_name: "जैसे: राहुल सरकार",
+        ph_phone: "जैसे: 9876543210",
+        ph_loc: "जैसे: Action Area 1, New Town",
+        ph_notes: "अपनी आवश्यकता का कुछ विवरण लिखें...",
+        book_txt: "बुक करें",
+        enq_txt: "पूछताछ",
+        type_book: "बुकिंग",
+        type_query: "पूछताछ",
+        loc_finding: "लोकेशन खोजी जा रही है...",
+        loc_done: "GPS लोकेशन सफलतापूर्वक जोड़ी गई!",
+        loc_err: "लोकेशन नहीं मिल सकी, कृपया पता लिखें।",
+        alert_validation: "कृपया अपना नाम और सही 10 अंकों का फोन नंबर दें।"
+      }
+    };
+
+    let activeLang = 'en';
+
+    function setLanguage(lang) {
+      if (!trans[lang]) lang = 'en';
+      activeLang = lang;
+      localStorage.setItem('rhh_lang', lang);
+      document.documentElement.lang = lang;
+      const t = trans[lang];
+
+      document.getElementById('txt_hero_title').innerHTML = t.hero_title;
+      document.getElementById('txt_hero_sub').innerText = t.hero_sub;
+      document.getElementById('txt_badge_support').innerText = t.badge_support;
+      document.getElementById('txt_badge_time').innerText = t.badge_time;
+      document.getElementById('txt_btn_query').innerText = t.btn_query;
+      document.getElementById('txt_btn_cat').innerText = t.btn_cat;
+
+      document.getElementById('txt_usp1_t').innerText = t.usp1_t;
+      document.getElementById('txt_usp1_d').innerText = t.usp1_d;
+      document.getElementById('txt_usp2_t').innerText = t.usp2_t;
+      document.getElementById('txt_usp2_d').innerText = t.usp2_d;
+      document.getElementById('txt_usp3_t').innerText = t.usp3_t;
+      document.getElementById('txt_usp3_d').innerText = t.usp3_d;
+      document.getElementById('txt_usp4_t').innerText = t.usp4_t;
+      document.getElementById('txt_usp4_d').innerText = t.usp4_d;
+
+      document.getElementById('txt_rate_t').innerText = t.rate_t;
+      document.getElementById('txt_rate_s').innerText = t.rate_s;
+      document.getElementById('txt_modal_note').innerText = t.modal_note;
+
+      document.getElementById('txt_lbl_name').innerText = t.lbl_name;
+      document.getElementById('txt_lbl_phone').innerText = t.lbl_phone;
+      document.getElementById('txt_lbl_loc').innerText = t.lbl_loc;
+      document.getElementById('txt_lbl_notes').innerText = t.lbl_notes;
+      document.getElementById('txt_btn_gps').innerText = t.btn_gps;
+      document.getElementById('txt_btn_submit').innerText = t.btn_submit;
+
+      // Update Form Placeholders
+      document.getElementById('custName').placeholder = t.ph_name;
+      document.getElementById('custPhone').placeholder = t.ph_phone;
+      document.getElementById('custAddress').placeholder = t.ph_loc;
+      document.getElementById('custNotes').placeholder = t.ph_notes;
+
+      // Update All Headings and Titles
+      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+        el.innerText = el.getAttribute('data-' + lang);
+      });
+
+      // Update Card Buttons
+      document.querySelectorAll('.btn-book').forEach(b => {
+        b.innerHTML = `<i class="fa-solid fa-calendar-check"></i> ${t.book_txt}`;
+      });
+      document.querySelectorAll('.btn-enq').forEach(b => {
+        b.innerHTML = `<i class="fa-solid fa-circle-question"></i> ${t.enq_txt}`;
+      });
+    }
+
+    const serviceNames = {
+      en: {"General Enquiry":"General Enquiry","Bathroom Deep Cleaning":"Bathroom Deep Cleaning","Home Deep Cleaning":"Home Deep Cleaning","Kitchen Cleaning":"Kitchen Cleaning","Move-in / Move-out Cleaning":"Move-in / Move-out Cleaning","Sofa & Carpet Cleaning":"Sofa & Carpet Cleaning","Electrician":"Electrician","Plumber":"Plumber","Mini Shifting":"Mini Shifting","Extra Exhaust Fan Cleaning":"Extra Exhaust Fan Cleaning"},
+      bn: {"General Enquiry":"সাধারণ অনুসন্ধান","Bathroom Deep Cleaning":"বাথরুম ডিপ ক্লিনিং","Home Deep Cleaning":"হোম ডিপ ক্লিনিং","Kitchen Cleaning":"কিচেন ক্লিনিং","Move-in / Move-out Cleaning":"মুভ-ইন / মুভ-আউট ক্লিনিং","Sofa & Carpet Cleaning":"সোফা ও কার্পেট ক্লিনিং","Electrician":"ইলেকট্রিশিয়ান","Plumber":"প্লাম্বার","Mini Shifting":"মিনি শিফটিং","Extra Exhaust Fan Cleaning":"অতিরিক্ত এক্সহস্ট ফ্যান ক্লিনিং"},
+      hi: {"General Enquiry":"सामान्य पूछताछ","Bathroom Deep Cleaning":"बाथरूम डीप क्लीनिंग","Home Deep Cleaning":"होम डीप क्लीनिंग","Kitchen Cleaning":"किचन क्लीनिंग","Move-in / Move-out Cleaning":"मूव-इन / मूव-आउट क्लीनिंग","Sofa & Carpet Cleaning":"सोफा और कारपेट क्लीनिंग","Electrician":"इलेक्ट्रीशियन","Plumber":"प्लंबर","Mini Shifting":"मिनी शिफ्टिंग","Extra Exhaust Fan Cleaning":"अतिरिक्त एग्जॉस्ट फैन क्लीनिंग"}
+    };
+
+    function openPopup(service, price, type) {
+      const t = trans[activeLang];
+      const typeText = (type === 'Booking') ? t.type_book : t.type_query;
+
+      document.getElementById('formService').value = service;
+      document.getElementById('formPrice').value = price || '';
+      document.getElementById('formActionType').value = typeText;
+
+      const displayService = (serviceNames[activeLang] && serviceNames[activeLang][service]) || service;
+      document.getElementById('modalServiceTitle').innerText = `${displayService} (${typeText})`;
+      document.getElementById('bookingModal').style.display = 'flex';
+    }
+
+    function closePopup() {
+      document.getElementById('bookingModal').style.display = 'none';
+      document.getElementById('locationStatus').innerText = '';
+    }
+
+    function fetchLiveLocation() {
+      const t = trans[activeLang];
+      const statusEl = document.getElementById('locationStatus');
+      statusEl.innerText = t.loc_finding;
+
+      if (!navigator.geolocation) {
+        statusEl.innerText = t.loc_err;
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          const lat = pos.coords.latitude;
+          const lon = pos.coords.longitude;
+          const mapUrl = `https://maps.google.com/?q=${lat},${lon}`;
+          document.getElementById('custMapUrl').value = mapUrl;
+          statusEl.innerHTML = `<i class="fa-solid fa-circle-check"></i> ${t.loc_done}`;
+        },
+        () => {
+          statusEl.innerText = t.loc_err;
+        },
+        { timeout: 10000 }
+      );
+    }
+
+    function sendWhatsApp(e) {
+      e.preventDefault();
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const address = document.getElementById('custAddress').value.trim();
+      const mapUrl = document.getElementById('custMapUrl').value.trim();
+      const notes = document.getElementById('custNotes').value.trim();
+      const service = document.getElementById('formService').value.trim();
+      const price = document.getElementById('formPrice').value.trim();
+      const actionType = document.getElementById('formActionType').value.trim();
+      const t = trans[activeLang] || trans.en;
+      if (!name || !/^[6-9]\d{9}$/.test(phone)) {
+        alert(t.alert_validation);
+        return;
+      }
+      const displayService = (serviceNames[activeLang] && serviceNames[activeLang][service]) || service;
+      let msg = '';
+      if (activeLang === 'bn') {
+        msg = `*নতুন সার্ভিস অনুসন্ধান - Rajarhat Home Hub*\n\n📌 *ধরন:* ${actionType}\n🛠 *সার্ভিস:* ${displayService}\n`;
+        if (price) msg += `💰 *নির্ধারিত রেট:* ${price}\n`;
+        msg += `------------------------\n👤 *গ্রাহকের নাম:* ${name}\n📞 *ফোন নম্বর:* ${phone}\n`;
+        if (address) msg += `🏠 *লোকেশন/ঠিকানা:* ${address}\n`;
+        if (mapUrl) msg += `📍 *লাইভ GPS ম্যাপ:* ${mapUrl}\n`;
+        if (notes) msg += `📝 *কাজের বিবরণ:* ${notes}\n`;
+        msg += `\n_Rajarhat Home Hub ওয়েবসাইট থেকে পাঠানো হয়েছে_`;
+      } else if (activeLang === 'hi') {
+        msg = `*नई सर्विस पूछताछ - Rajarhat Home Hub*\n\n📌 *प्रकार:* ${actionType}\n🛠 *सर्विस:* ${displayService}\n`;
+        if (price) msg += `💰 *कोटेड रेट:* ${price}\n`;
+        msg += `------------------------\n👤 *ग्राहक का नाम:* ${name}\n📞 *फोन नंबर:* ${phone}\n`;
+        if (address) msg += `🏠 *लोकेशन/पता:* ${address}\n`;
+        if (mapUrl) msg += `📍 *लाइव GPS मैप:* ${mapUrl}\n`;
+        if (notes) msg += `📝 *काम की जानकारी:* ${notes}\n`;
+        msg += `\n_Rajarhat Home Hub वेबसाइट से भेजा गया_`;
+      } else {
+        msg = `*NEW SERVICE INQUIRY - Rajarhat Home Hub*\n\n📌 *Type:* ${actionType}\n🛠 *Service:* ${displayService}\n`;
+        if (price) msg += `💰 *Quoted Rate:* ${price}\n`;
+        msg += `------------------------\n👤 *Customer Name:* ${name}\n📞 *Phone Number:* ${phone}\n`;
+        if (address) msg += `🏠 *Location/Address:* ${address}\n`;
+        if (mapUrl) msg += `📍 *Live GPS Map:* ${mapUrl}\n`;
+        if (notes) msg += `📝 *Notes/Requirements:* ${notes}\n`;
+        msg += `\n_Sent directly from Rajarhat Home Hub Website_`;
+      }
+      const waLink = `https://wa.me/918240666058?text=${encodeURIComponent(msg)}`;
+      closePopup();
+      document.getElementById('leadForm').reset();
+      document.getElementById('custMapUrl').value = '';
+      window.open(waLink, '_blank', 'noopener,noreferrer');
+    }
+
+    const savedLang = localStorage.getItem('rhh_lang');
+    if (savedLang && trans[savedLang]) {
+      document.getElementById('langSelect').value = savedLang;
+      setLanguage(savedLang);
+    } else {
+      setLanguage('en');
+    }
+
+    window.onclick = function(e) {
+      if (e.target === document.getElementById('bookingModal')) {
+        closePopup();
+      }
+    };
+  </script>
+</body>
+</html>
